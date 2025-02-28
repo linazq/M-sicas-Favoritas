@@ -1,0 +1,156 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Usando a fonte Poppins em todo o site */
+    background-color: #2e003e; /* Roxo escuro */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; /* Para garantir que a margem padrão do navegador não interfira */
+    position: relative; /* Para os pontinhos de luz se posicionarem em relação ao body */
+}
+
+/* Menu no topo */
+#menu {
+    background-color: #9c27b0; /* Roxo mais intenso */
+    color: white;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif; /* Usando a fonte Poppins também no menu */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#menu ul li a:hover {
+    background-color: #ab47bc; /* Roxo claro */
+}
+
+/* Container principal com display flex para colocar o formulário e a tabela lado a lado */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Define a largura máxima */
+    margin-top: 30px;
+    margin-bottom: 100px; /* Para não sobrepor o rodapé */
+    gap: 30px; /* Espaçamento entre o formulário e a tabela */
+}
+
+/* Estilo do container do formulário e da tabela com a mesma altura e largura */
+#form-container, #tabela-container {
+    width: 48%; /* Largura reduzida para que os dois elementos ocupem o mesmo espaço */
+    height: 600px; /* Aumentando a altura */
+    background-color: #6a1b9a; /* Roxo claro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 30px; /* Espaçamento inferior */
+    display: flex;
+    flex-direction: column; /* Flexbox para controlar os elementos do formulário e da tabela */
+    justify-content: space-between; /* Para garantir que o conteúdo ocupe todo o espaço disponível */
+}
+
+/* Ajustando a altura da tabela */
+#tabela-container {
+    background-color: #7b1fa2; /* Roxo médio */
+}
+
+/* Ajustando a altura do formulário */
+#form-container {
+    background-color: #6a1b9a; /* Roxo claro */
+}
+
+/* Animação para aumentar o formulário e a tabela ao passar o mouse */
+#form-container:hover,
+#tabela-container:hover {
+    transform: scale(1.05);
+}
+
+/* Títulos */
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif; /* Usando a fonte Poppins para o título */
+}
+
+/* Estilo dos campos de input */
+input[type="text"] {
+    width: 100%; /* Ajusta o campo para ter o mesmo tamanho do formulário */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f1f1f1;
+    box-sizing: border-box; /* Garante que o padding não ultrapasse o tamanho do input */
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border: 2px solid #ab47bc; /* Roxo claro */
+}
+
+/* Estilo do botão */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #9c27b0; /* Roxo mais intenso */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8e24aa; /* Roxo mais escuro */
+}
+
+/* Estilo da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #fff;
+    height: 100%; /* Garantir que a tabela ocupe toda a altura disponível */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #8e24aa; /* Roxo mais forte */
+}
+
+tr:nth-child(even) {
+    background-color: #6a1b9a; 
+}

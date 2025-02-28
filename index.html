@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Músicas Favoritas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+
+    <!-- Menu no topo -->
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="desenvolvedores.html">Desenvolvedores</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div id="form-container">
+            <h2>Cadastro Das Suas Cinco Músicas Favoritas!</h2>
+            <form id="musicaForm">
+                <label for="musica1">Música 1:</label>
+                <input type="text" id="musica1" name="musica1" required>
+
+                <label for="musica2">Música 2:</label>
+                <input type="text" id="musica2" name="musica2" required>
+
+                <label for="musica3">Música 3:</label>
+                <input type="text" id="musica3" name="musica3" required>
+
+                <label for="musica4">Música 4:</label>
+                <input type="text" id="musica4" name="musica4" required>
+
+                <label for="musica5">Música 5:</label>
+                <input type="text" id="musica5" name="musica5" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+        <div id="tabela-container">
+            <h2>Músicas Favoritas Cadastradas</h2>
+            <table id="tabelaMusicas">
+                <thead>
+                    <tr>
+                        <th>Música 1</th>
+                        <th>Música 2</th>
+                        <th>Música 3</th>
+                        <th>Música 4</th>
+                        <th>Música 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dados cadastrados irão aparecer aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer id="rodape">
+        <p>&copy; 2025 IFRN Campus Santa Cruz</p>
+        <p>Trabalho de Autoria Web</p>
+        <p>Prof. Marcelo Figueiredo Barbosa Júnior</p>
+        <p>Eduardo do Nascimento & Thamyres Matias</p>
+    </footer>
+
+    <script>
+        // Função para processar o envio do formulário
+        document.getElementById('musicaForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário padrão
+
+            // Captura os valores do formulário
+            const musica1 = document.getElementById('musica1').value;
+            const musica2 = document.getElementById('musica2').value;
+            const musica3 = document.getElementById('musica3').value;
+            const musica4 = document.getElementById('musica4').value;
+            const musica5 = document.getElementById('musica5').value;
+
+            // Cria uma nova linha na tabela
+            const tabela = document.getElementById('tabelaMusicas').getElementsByTagName('tbody')[0];
+            const novaLinha = tabela.insertRow();
+
+            // Insere as células na linha com os dados das músicas
+            novaLinha.insertCell(0).textContent = musica1;
+            novaLinha.insertCell(1).textContent = musica2;
+            novaLinha.insertCell(2).textContent = musica3;
+            novaLinha.insertCell(3).textContent = musica4;
+            novaLinha.insertCell(4).textContent = musica5;
+
+            // Limpa o formulário após o cadastro
+            document.getElementById('musicaForm').reset();
+        });
+    </script>
+
+</body>
+</html>
