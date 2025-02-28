@@ -1,3 +1,11 @@
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte padrão */
 body {
     font-family: 'Poppins', sans-serif; /* Usando a fonte Poppins em todo o site */
     background-color: #2e003e; /* Roxo escuro */
@@ -75,6 +83,7 @@ body {
 /* Ajustando a altura da tabela */
 #tabela-container {
     background-color: #7b1fa2; /* Roxo médio */
+    margin-top: 0; /* Remover margem superior */
 }
 
 /* Ajustando a altura do formulário */
@@ -135,10 +144,11 @@ button:hover {
 /* Estilo da tabela */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Colapsa as bordas das células */
     margin-top: 20px;
     color: #fff;
     height: 100%; /* Garantir que a tabela ocupe toda a altura disponível */
+    border-spacing: 0; /* Remove o espaçamento entre as células */
 }
 
 th, td {
@@ -153,4 +163,57 @@ th {
 
 tr:nth-child(even) {
     background-color: #6a1b9a; 
+}
+
+/* Cartões de desenvolvedores (container flex) */
+.dev-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+/* Cartão individual do desenvolvedor */
+.dev-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+/* Imagem do desenvolvedor */
+.dev-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Informações do desenvolvedor */
+.dev-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.dev-info p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+#rodape {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
