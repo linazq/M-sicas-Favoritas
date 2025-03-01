@@ -1,28 +1,24 @@
-/* Resetando margens e paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fonte padrão */
 body {
-    font-family: 'Poppins', sans-serif; /* Usando a fonte Poppins em todo o site */
-    background-color: #2e003e; /* Roxo escuro */
+    font-family: 'Poppins', sans-serif;
+    background-color: #2e003e;
     color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
     flex-direction: column;
+    padding: 40px 20px;
     min-height: 100vh;
-    margin: 0; /* Para garantir que a margem padrão do navegador não interfira */
-    position: relative; /* Para os pontinhos de luz se posicionarem em relação ao body */
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
-/* Menu no topo */
 #menu {
-    background-color: #9c27b0; /* Roxo mais intenso */
+    background-color: #9c27b0;
     color: white;
     width: 100%;
     padding: 15px 0;
@@ -44,71 +40,57 @@ body {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
-    font-family: 'Poppins', sans-serif; /* Usando a fonte Poppins também no menu */
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 #menu ul li a:hover {
-    background-color: #ab47bc; /* Roxo claro */
+    background-color: #ab47bc;
 }
 
-/* Container principal com display flex para colocar o formulário e a tabela lado a lado */
 .main-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
-    max-width: 1200px; /* Define a largura máxima */
+    max-width: 1200px;
     margin-top: 30px;
-    margin-bottom: 100px; /* Para não sobrepor o rodapé */
-    gap: 30px; /* Espaçamento entre o formulário e a tabela */
+    margin-bottom: 100px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-/* Estilo do container do formulário e da tabela com a mesma altura e largura */
 #form-container, #tabela-container {
-    width: 48%; /* Largura reduzida para que os dois elementos ocupem o mesmo espaço */
-    height: 600px; /* Aumentando a altura */
-    background-color: #6a1b9a; /* Roxo claro */
+    width: 45%;
+    min-width: 300px;
+    height: 600px;
+    background-color: #6a1b9a;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 30px; /* Espaçamento inferior */
     display: flex;
-    flex-direction: column; /* Flexbox para controlar os elementos do formulário e da tabela */
-    justify-content: space-between; /* Para garantir que o conteúdo ocupe todo o espaço disponível */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Ajustando a altura da tabela */
-#tabela-container {
-    background-color: #7b1fa2; /* Roxo médio */
-    margin-top: 0; /* Remover margem superior */
-}
-
-/* Ajustando a altura do formulário */
-#form-container {
-    background-color: #6a1b9a; /* Roxo claro */
-}
-
-/* Animação para aumentar o formulário e a tabela ao passar o mouse */
 #form-container:hover,
 #tabela-container:hover {
     transform: scale(1.05);
 }
 
-/* Títulos */
 h2 {
     font-size: 1.5em;
     text-align: center;
     color: #fff;
     margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif; /* Usando a fonte Poppins para o título */
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Estilo dos campos de input */
 input[type="text"] {
-    width: 100%; /* Ajusta o campo para ter o mesmo tamanho do formulário */
+    width: 100%;
     padding: 12px;
     margin-bottom: 15px;
     border: none;
@@ -116,19 +98,18 @@ input[type="text"] {
     font-size: 1em;
     color: #333;
     background-color: #f1f1f1;
-    box-sizing: border-box; /* Garante que o padding não ultrapasse o tamanho do input */
+    box-sizing: border-box;
 }
 
 input[type="text"]:focus {
     outline: none;
-    border: 2px solid #ab47bc; /* Roxo claro */
+    border: 2px solid #ab47bc;
 }
 
-/* Estilo do botão */
 button {
     width: 100%;
     padding: 15px;
-    background-color: #9c27b0; /* Roxo mais intenso */
+    background-color: #9c27b0;
     color: white;
     border: none;
     border-radius: 5px;
@@ -138,17 +119,16 @@ button {
 }
 
 button:hover {
-    background-color: #8e24aa; /* Roxo mais escuro */
+    background-color: #8e24aa;
 }
 
-/* Estilo da tabela */
 table {
     width: 100%;
-    border-collapse: collapse; /* Colapsa as bordas das células */
+    border-collapse: collapse;
     margin-top: 20px;
     color: #fff;
-    height: 100%; /* Garantir que a tabela ocupe toda a altura disponível */
-    border-spacing: 0; /* Remove o espaçamento entre as células */
+    height: 100%;
+    border-spacing: 0;
 }
 
 th, td {
@@ -158,56 +138,13 @@ th, td {
 }
 
 th {
-    background-color: #8e24aa; /* Roxo mais forte */
+    background-color: #8e24aa;
 }
 
 tr:nth-child(even) {
-    background-color: #6a1b9a; 
+    background-color: #6a1b9a;
 }
 
-/* Cartões de desenvolvedores (container flex) */
-.dev-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-}
-
-/* Cartão individual do desenvolvedor */
-.dev-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    text-align: center;
-}
-
-/* Imagem do desenvolvedor */
-.dev-image {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-/* Informações do desenvolvedor */
-.dev-info h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.dev-info p {
-    font-size: 1em;
-    margin-bottom: 10px;
-}
-
-/* Rodapé */
 #rodape {
     background-color: #333;
     color: #fff;
@@ -216,4 +153,128 @@ tr:nth-child(even) {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+#right-icons {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 2em;
+    color: #ab47bc;
+}
+
+#right-icons i {
+    transition: transform 0.3s ease;
+}
+
+#right-icons i:hover {
+    transform: scale(1.2);
+}
+
+#right-icons .fa-star, #right-icons .fa-music {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.3);
+    }
+}
+
+#desenvolvedores-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#desenvolvedores-container .header h2 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#desenvolvedores-container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#desenvolvedores-container .dev-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+#desenvolvedores-container .dev-card {
+    background-color: #6a1b9a;
+    border-radius: 10px;
+    width: 280px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+#desenvolvedores-container .dev-card:hover {
+    transform: scale(1.05);
+}
+
+#desenvolvedores-container .dev-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+#desenvolvedores-container .dev-info {
+    color: #fff;
+}
+
+#desenvolvedores-container .dev-info h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+#desenvolvedores-container .dev-info p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+#desenvolvedores-container .dev-info p strong {
+    color: #ffeb3b;
+}
+
+#rodape {
+    background-color: #9c27b0;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.1em;
+}
+
+#rodape p {
+    margin: 5px 0;
+}
+
+#rodape p:first-child {
+    font-weight: bold;
+}
+
+#rodape:hover {
+    background-color: #8e24aa;
+    cursor: pointer;
 }

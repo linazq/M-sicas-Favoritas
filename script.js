@@ -1,4 +1,3 @@
-// Ao carregar a página, carregue os dados do localStorage
 window.onload = function() {
     const musicas = JSON.parse(localStorage.getItem('musicasFavoritas')) || [];
     const tabela = document.getElementById('tabelaMusicas').getElementsByTagName('tbody')[0];
@@ -11,7 +10,6 @@ window.onload = function() {
     });
 };
 
-// Ao adicionar uma nova linha, salve os dados no localStorage
 document.getElementById('musicaForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -32,7 +30,6 @@ document.getElementById('musicaForm').addEventListener('submit', function(event)
 
     localStorage.setItem('musicasFavoritas', JSON.stringify(musicas));
 
-    // Cria uma nova linha na tabela
     const tabela = document.getElementById('tabelaMusicas').getElementsByTagName('tbody')[0];
     const novaLinha = tabela.insertRow();
     musicaData.forEach((musica, index) => {

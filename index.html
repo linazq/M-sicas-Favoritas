@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Músicas Favoritas</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
 
-    <!-- Menu no topo -->
     <nav id="menu">
         <ul>
             <li><a href="index.html">Página Inicial</a></li>
@@ -53,7 +52,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Dados cadastrados irão aparecer aqui -->
                 </tbody>
             </table>
         </div>
@@ -67,29 +65,24 @@
     </footer>
 
     <script>
-        // Função para processar o envio do formulário
         document.getElementById('musicaForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio do formulário padrão
+            event.preventDefault();
 
-            // Captura os valores do formulário
             const musica1 = document.getElementById('musica1').value;
             const musica2 = document.getElementById('musica2').value;
             const musica3 = document.getElementById('musica3').value;
             const musica4 = document.getElementById('musica4').value;
             const musica5 = document.getElementById('musica5').value;
 
-            // Cria uma nova linha na tabela
             const tabela = document.getElementById('tabelaMusicas').getElementsByTagName('tbody')[0];
             const novaLinha = tabela.insertRow();
 
-            // Insere as células na linha com os dados das músicas
             novaLinha.insertCell(0).textContent = musica1;
             novaLinha.insertCell(1).textContent = musica2;
             novaLinha.insertCell(2).textContent = musica3;
             novaLinha.insertCell(3).textContent = musica4;
             novaLinha.insertCell(4).textContent = musica5;
 
-            // Limpa o formulário após o cadastro
             document.getElementById('musicaForm').reset();
         });
     </script>
